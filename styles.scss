@@ -1,0 +1,192 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Press+Start+2P&family=Righteous&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 120vh;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.842) 0%,
+    rgba(0, 0, 0, 0.801) 100%
+  );
+  background-blend-mode: multiply, multiply;
+
+  background-repeat: no-repeat;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  h2 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-top: 2.5rem;
+    text-align: center;
+    color: #f5efef;
+  }
+  p {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+.form {
+  text-align: center;
+  padding: 2rem 2rem 2rem;
+  position: relative;
+  z-index: 20;
+  input {
+    font-family: "Righteous", cursive;
+    letter-spacing: 1px;
+    width: 30rem;
+    height: 4rem;
+    outline: none;
+    border: none;
+    padding-left: 2rem;
+    border-radius: 5px;
+    background-color: rgb(230, 229, 229);
+    box-shadow: 0 23.3px 8.4px rgba(0, 0, 0, 0.025),
+      0 33.5px 20.1px rgba(0, 0, 0, 0.038), 0 41.2px 37.9px rgba(0, 0, 0, 0.045),
+      0 49.6px 67.7px rgba(0, 0, 0, 0.049),
+      0 62.6px 126.6px rgba(0, 0, 0, 0.053), 0 100px 303px rgba(0, 0, 0, 0.07);
+  }
+  button {
+    font-family: "Righteous", cursive;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: #292929;
+  }
+}
+.elements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+
+  position: relative;
+  z-index: 20;
+}
+.contents {
+  margin: 1.2rem 0.8rem;
+
+  border-radius: 5px;
+  width: 210px;
+  height: 110px;
+  color: rgb(31, 31, 31);
+  background-image: linear-gradient(
+    to top,
+    #e4e4e4 0%,
+    #f7f7f7 52%,
+    #ebebeb 100%
+  );
+  box-shadow: 0 9px 9.7px rgba(0, 0, 0, 0.009),
+    0 17.2px 18px rgba(0, 0, 0, 0.016), 0 25.3px 25.1px rgba(0, 0, 0, 0.024),
+    0 34.9px 32.2px rgba(0, 0, 0, 0.033), 0 50.7px 43.1px rgba(0, 0, 0, 0.046),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  transition: all 0.5s;
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0.5rem;
+  }
+  p {
+    color: rgb(172, 51, 51);
+    margin-top: 1.5rem;
+    font-family: "Press Start 2P", cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .city {
+    padding: 0;
+    margin-top: 0.6rem;
+    word-wrap: break-word;
+    font-size: 0.7rem;
+
+    line-height: 2;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+#weathermap {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  padding-bottom: 0rem;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width: 25rem;
+  margin: 0 auto;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+@media screen and (max-width: 726px) {
+  .contents {
+    width: 150px;
+    height: 90px;
+    h4 {
+      font-size: 0.8rem;
+
+      margin: 0.5rem;
+    }
+    p {
+      font-size: 0.6rem;
+    }
+    .city {
+      font-size: 0.6rem;
+    }
+  }
+  .form {
+    input {
+      width: 88%;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .elements {
+    padding: 0 0.4rem;
+  }
+  .contents {
+    width: 150px;
+    height: 90px;
+    margin: 0.4rem 0.4rem;
+  }
+  #weathermap {
+    position: absolute;
+    top: 8rem;
+
+    z-index: 1;
+  }
+}

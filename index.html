@@ -1,0 +1,69 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>IP Address Tracker</h2>
+      <div class="form">
+        <form id="ip-form">
+          <input
+            type="text"
+            placeholder="Enter the ip address e.g(1.2.3.4)"
+            class="user-ip"
+          />
+          <button onclick="scrollWin(0,400)" type="submit" class="btn">
+            Search
+          </button>
+        </form>
+      </div>
+
+      <div class="x"></div>
+
+      <div class="elements">
+        <div class="contents">
+          <h4>Location</h4>
+          <p class="Location"></p>
+        </div>
+        <div class="contents">
+          <h4>City <i class="far fa-building"></i></h4>
+          <p class="city"></p>
+        </div>
+        <div class="contents">
+          <h4>Lat</h4>
+          <p class="lat"></p>
+        </div>
+        <div class="contents">
+          <h4>Lng</h4>
+          <p class="lng"></p>
+        </div>
+        <div class="contents">
+          <h4>Time</h4>
+
+          <p class="time"></p>
+        </div>
+      </div>
+    </div>
+    <div id="weathermap"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
